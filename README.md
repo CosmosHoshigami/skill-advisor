@@ -82,8 +82,6 @@ task-match-skills/
 ├── SKILL.md                         # Main skill definition
 ├── README.md                        # This file
 ├── LICENSE                          # MIT
-├── references/
-│   └── keyword-mappings.md          # Domain→keyword expansion reference
 ├── examples/
 │   └── example-output.md            # Sample output walkthrough
 └── tests/
@@ -100,7 +98,6 @@ task-match-skills/
 
 ### Ideas for contribution
 
-- Add more domain→keyword mappings to `references/keyword-mappings.md`
 - Improve trigger sensitivity heuristics
 - Add support for additional agent platforms
 - Translate output templates to more languages
