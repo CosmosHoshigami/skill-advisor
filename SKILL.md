@@ -43,12 +43,35 @@ Task Match Skills finds the right tools for you.
 | **Skill** | Skill name + install path | `owner/repo@skill-name` |
 | **Description** | One-line summary of what it does | "GitHub PR and issue automation" |
 | **Why this helps** | How it relates to the user's request | "Automates the deploy workflow you described" |
-| **Source** | Which search tool found it | `npx skills find "ci cd"` |
+| **Source** | Tool name + abbreviated keyword | `find-skills → "ci cd"` |
 | **Install** | Exact install command | `npx skills add owner/repo@skill-name` |
+
+**Source column format:** `<tool> → "<first keyword used>"`
+
+- If found by multiple tools, list the primary one (see priority below)
+- Keep the keyword short — just the first search term, truncated to ~20 chars
 
 **Do NOT omit the Source or Install columns.** Users need to know where each
 skill came from and how to install it. A recommendation without these is
 incomplete and unactionable.
+
+---
+
+## 🔍 Search Tool Priority
+
+`find-skills` (the skill from `vercel-labs/skills`) is the most recognized and
+widely-used discovery tool in the Agent Skills ecosystem. Treat it as the
+**primary** search channel whenever available.
+
+| Priority | Tool | When to use |
+|----------|------|-------------|
+| 🥇 **Primary** | `find-skills` skill | Always, if installed locally |
+| 🥈 **Secondary** | `npx skills find` | Always available, use to supplement |
+| 🥉 **Fallback** | `openskills`, `load-skill`, etc. | If detected and primary/secondary miss coverage |
+
+**Source attribution when multiple tools find the same skill:** always credit
+`find-skills` first. Example: if both `find-skills` and `npx skills find`
+return the same result, the source column shows `find-skills → "keyword"`.
 
 ---
 
@@ -139,22 +162,34 @@ Build a list of **actually available** search methods. Common ones include:
 
 ### Step 5 — Search Remote
 
-Use **all available tools** detected in Step 4. Each tool may cover a
-different part of the ecosystem, so combining them gives the best results.
+Search in priority order. **`find-skills` first**, then `npx skills find`,
+then any other tools detected in Step 4.
 
-Run 3–6 searches per available tool with varied keywords:
+**🥇 Primary — `find-skills` (if installed):**
+
+Start here. `find-skills` is the most recognized discovery tool and covers
+GitHub-indexed skills beyond the skills.sh registry. Run 3–5 searches
+with varied keywords.
+
+**🥈 Secondary — `npx skills find` (always available):**
+
+Fill gaps the primary search may have missed. Focus on keywords you haven't
+tried yet:
 
 ```bash
-# Example: if npx skills and find-skills are both available
 npx skills find "<exact keywords>"      # skills.sh registry
 npx skills find "<broader keywords>"    # widen scope
 npx skills find "<related domain>"      # adjacent areas
-# + invoke find-skills with the top 2–3 keywords
 ```
 
-> ⚠️ **Important:** When reporting results, always record which tool each
-> skill was found with. This lets users understand the discovery path and
-> reproduce it later.
+**🥉 Fallback — `openskills`, `load-skill`, etc.:**
+
+Only if primary + secondary return sparse results and these tools are detected.
+
+> ⚠️ **Source attribution priority:** if the same skill is found by multiple
+> tools, report the highest-priority tool as the source (e.g. `find-skills`
+> beats `npx skills find`). This gives users the most accessible discovery
+> path.
 
 **Search strategy:**
 - Start specific, then broaden (e.g. "react deploy aws" → "deploy hosting" → "cloud infrastructure")
@@ -212,17 +247,17 @@ Present findings then ask:
 ### 🔥 Strong matches
 | Skill | Description | Why this helps | Source | Install |
 |-------|------------|---------------|--------|---------|
-| ... | ... | ... | `npx skills find "..."` | `npx skills add ...` |
+| ... | ... | ... | `find-skills → "..."` | `npx skills add ...` |
 
 ### 👍 Worth considering
 | Skill | Description | Why this helps | Source | Install |
 |-------|------------|---------------|--------|---------|
-| ... | ... | ... | `find-skills` | `npx skills add ...` |
+| ... | ... | ... | `npx skills find → "..."` | `npx skills add ...` |
 
 ### 💡 Might be useful
 | Skill | Description | Why this helps | Source | Install |
 |-------|------------|---------------|--------|---------|
-| ... | ... | ... | `npx skills find "..."` + `find-skills` | `npx skills add ...` |
+| ... | ... | ... | `openskills → "..."` | `npx skills add ...` |
 
 ## 💭 Recommendation
 
