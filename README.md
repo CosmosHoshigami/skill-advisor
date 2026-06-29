@@ -27,7 +27,7 @@ Skill Advisor:
 ## Quick Install
 
 ```bash
-npx skills add <your-username>/skill-advisor
+npx skills add CosmosHoshigami/skill-advisor
 ```
 
 Or install directly from your agent:
