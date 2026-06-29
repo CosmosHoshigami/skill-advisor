@@ -1,10 +1,10 @@
-# Example: Skill Advisor in Action
+# Example: Skill Scout in Action
 
 ## User says:
 
 > "I need to build a data dashboard for my PostgreSQL database and deploy it somewhere"
 
-## Skill Advisor response:
+## Skill Scout response:
 
 ### 🔍 What I understood
 

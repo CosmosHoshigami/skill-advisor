@@ -1,14 +1,14 @@
-# Skill Advisor — Discover Skills While You Work
+# Skill Scout — Discover Skills While You Work
 
 > Stop guessing which agent skills exist. Describe your task naturally and
-> Skill Advisor finds the right tools for you.
+> Skill Scout finds the right tools for you.
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blue)](https://agentskills.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## What is this?
 
-Skill Advisor is an **agent skill** that automatically analyzes your requests
+Skill Scout is an **agent skill** that automatically analyzes your requests
 and searches the open agent skills ecosystem to find relevant tools. You
 describe what you want to do — it finds skills that can help.
 
@@ -17,7 +17,7 @@ describe what you want to do — it finds skills that can help.
 ```
 You:  "I want to deploy my React app to AWS with CI/CD"
 
-Skill Advisor:
+Skill Scout:
   🔍 Analyzes: domain=deployment, tools=React/AWS, action=deploy+automate
   📦 Checks: your installed skills
   🌐 Searches: "react deploy aws", "ci cd pipeline", "cloud infrastructure"...
@@ -27,14 +27,14 @@ Skill Advisor:
 ## Quick Install
 
 ```bash
-npx skills add CosmosHoshigami/skill-advisor
+npx skills add CosmosHoshigami/skill-scout
 ```
 
 This installs the skill to your current project. To install globally (all projects),
 add the `-g` flag:
 
 ```bash
-npx skills add CosmosHoshigami/skill-advisor -g
+npx skills add CosmosHoshigami/skill-scout -g
 ```
 
 Requires [npx skills CLI](https://skills.sh). Works with Claude Code, Codex,
@@ -43,10 +43,10 @@ Cursor, GitHub Copilot, and any agent supporting the
 
 ## Usage
 
-Skill Advisor is designed to activate automatically when you describe a task
+Skill Scout is designed to activate automatically when you describe a task
 in natural language. However, auto-invocation behavior varies across agents.
 **To guarantee it runs, explicitly invoke the skill before describing your
-task** — for example, type `/skill-advisor` followed by your request in Claude
+task** — for example, type `/skill-scout` followed by your request in Claude
 Code, or use your agent's equivalent skill invocation command. This ensures
 the skill searches for relevant tools before you begin working.
 
@@ -61,7 +61,7 @@ the skill searches for relevant tools before you begin working.
 
 ## Trigger Sensitivity
 
-Skill Advisor ships in **aggressive** mode (triggers on most messages). If you
+Skill Scout ships in **aggressive** mode (triggers on most messages). If you
 prefer less frequent suggestions:
 
 | Mode | When it triggers | How to switch |
@@ -78,7 +78,7 @@ prefer less frequent suggestions:
 ## Structure
 
 ```
-skill-advisor/
+skill-scout/
 ├── SKILL.md                         # Main skill definition
 ├── README.md                        # This file
 ├── LICENSE                          # MIT

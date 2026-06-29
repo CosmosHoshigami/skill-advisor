@@ -1,5 +1,5 @@
 ---
-name: skill-advisor
+name: skill-scout
 description: >-
   Intelligently analyzes user needs from natural language, extracts keywords
   and domain concepts, searches both locally installed and remote skills via
@@ -11,16 +11,16 @@ when_to_use: >-
   (especially without mentioning specific skills). Examples: "I want to build
   a...", "How do I deploy...", "Can you help me convert...", "Recommend tools
   for...", "What's the best way to test...". Also trigger-able manually via
-  /skill-advisor.
+  /skill-scout.
 disable-model-invocation: false
 user-invocable: true
 argument-hint: "[describe your task or need]"
 ---
 
-# Skill Advisor — Discover Skills While You Work
+# Skill Scout — Discover Skills While You Work
 
 Stop guessing which skills exist. Describe your task in natural language and
-Skill Advisor finds the right tools for you.
+Skill Scout finds the right tools for you.
 
 ## What It Does
 
