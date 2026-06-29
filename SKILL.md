@@ -34,6 +34,24 @@ Task Match Skills finds the right tools for you.
 
 ---
 
+## ⚠️ Mandatory Output Requirements
+
+**Every recommendation table MUST include these 5 columns — no exceptions:**
+
+| Column | Content | Example |
+|--------|---------|---------|
+| **Skill** | Skill name + install path | `owner/repo@skill-name` |
+| **Description** | One-line summary of what it does | "GitHub PR and issue automation" |
+| **Why this helps** | How it relates to the user's request | "Automates the deploy workflow you described" |
+| **Source** | Which search tool found it | `npx skills find "ci cd"` |
+| **Install** | Exact install command | `npx skills add owner/repo@skill-name` |
+
+**Do NOT omit the Source or Install columns.** Users need to know where each
+skill came from and how to install it. A recommendation without these is
+incomplete and unactionable.
+
+---
+
 ## Trigger Sensitivity Configuration
 
 This skill ships with `disable-model-invocation: false` (auto-trigger on).
