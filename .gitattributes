@@ -1,0 +1,13 @@
+* text=auto
+
+# Shell scripts must have LF line endings
+*.sh text eol=lf
+
+# Markdown and text files
+*.md text
+*.txt text
+
+# JSON, YAML
+*.json text
+*.yaml text
+*.yml text

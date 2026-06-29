@@ -15,8 +15,6 @@ when_to_use: >-
 disable-model-invocation: false
 user-invocable: true
 argument-hint: "[describe your task or need]"
-allowed-tools: Bash(npx skills find:*) Bash(npx skills add:*) Bash(ls:~/.claude/skills/*) Bash(ls:.claude/skills/*) Read
-shell: bash
 ---
 
 # Skill Advisor — Discover Skills While You Work

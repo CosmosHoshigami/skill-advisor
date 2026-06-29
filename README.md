@@ -30,10 +30,16 @@ Skill Advisor:
 npx skills add CosmosHoshigami/skill-advisor
 ```
 
-Or install directly from your agent:
+This installs the skill to your current project. To install globally (all projects),
+add the `-g` flag:
+
+```bash
+npx skills add CosmosHoshigami/skill-advisor -g
 ```
-/skill-advisor
-```
+
+Requires [npx skills CLI](https://skills.sh). Works with Claude Code, Codex,
+Cursor, GitHub Copilot, and any agent supporting the
+[Agent Skills](https://agentskills.io) standard.
 
 ## Features
 
@@ -64,8 +70,10 @@ prefer less frequent suggestions:
 
 ```
 skill-advisor/
-├── SKILL.md                         # Main skill definition
+├── SKILL.md                         # Main skill definition (English)
+├── SKILL_ZH.md                      # Chinese translation
 ├── README.md                        # This file
+├── LICENSE                          # MIT
 ├── references/
 │   └── keyword-mappings.md          # Domain→keyword expansion reference
 ├── examples/
