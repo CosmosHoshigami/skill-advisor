@@ -109,8 +109,22 @@ Extract from the user's request:
 | **Action** | What does user want to do? | Deploy, host |
 | **Related** | What else might they need? | CI/CD, Docker, monitoring, SSL, DNS |
 
-Read `references/keyword-mappings.md` to expand your keyword list with
-related concepts the user may not have mentioned.
+Don't just search the user's exact words — **reason about what else the task
+might involve.** Ask yourself:
+
+1. **Upstream:** what needs to happen before this task?
+2. **Downstream:** what happens after?
+3. **Toolchain:** what tools typically work with the ones mentioned?
+4. **Adjacent domains:** what related areas might have specialized skills?
+
+Example — user says "deploy my React app to AWS":
+
+- Upstream: CI/CD pipeline to build → search "ci cd github actions"
+- Downstream: monitoring after deploy → search "monitoring logging alerting"
+- Toolchain: containers for deployment → search "docker container kubernetes"
+- Adjacent: security for production → search "ssl certificate security scan"
+
+This produces 5–10 keywords the user never said but will need.
 
 ### Step 3 — Check Local
 
