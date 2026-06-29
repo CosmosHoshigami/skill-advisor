@@ -70,8 +70,7 @@ prefer less frequent suggestions:
 
 ```
 skill-advisor/
-├── SKILL.md                         # Main skill definition (English)
-├── SKILL_ZH.md                      # Chinese translation
+├── SKILL.md                         # Main skill definition
 ├── README.md                        # This file
 ├── LICENSE                          # MIT
 ├── references/
