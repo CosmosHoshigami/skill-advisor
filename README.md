@@ -41,6 +41,15 @@ Requires [npx skills CLI](https://skills.sh). Works with Claude Code, Codex,
 Cursor, GitHub Copilot, and any agent supporting the
 [Agent Skills](https://agentskills.io) standard.
 
+## Usage
+
+Skill Advisor is designed to activate automatically when you describe a task
+in natural language. However, auto-invocation behavior varies across agents.
+**To guarantee it runs, explicitly invoke the skill before describing your
+task** — for example, type `/skill-advisor` followed by your request in Claude
+Code, or use your agent's equivalent skill invocation command. This ensures
+the skill searches for relevant tools before you begin working.
+
 ## Features
 
 - 🧠 **Intent-aware** — understands domains, tools, and actions from natural language
