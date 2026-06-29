@@ -1,10 +1,10 @@
-# Example: Skill Scout in Action
+# Example: Task Match Skills in Action
 
 ## User says:
 
 > "I need to build a data dashboard for my PostgreSQL database and deploy it somewhere"
 
-## Skill Scout response:
+## Task Match Skills response:
 
 ### 🔍 What I understood
 

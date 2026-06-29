@@ -1,14 +1,14 @@
-# Skill Scout — Discover Skills While You Work
+# Task Match Skills — Discover Skills While You Work
 
 > Stop guessing which agent skills exist. Describe your task naturally and
-> Skill Scout finds the right tools for you.
+> Task Match Skills finds the right tools for you.
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blue)](https://agentskills.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## What is this?
 
-Skill Scout is an **agent skill** that automatically analyzes your requests
+Task Match Skills is an **agent skill** that automatically analyzes your requests
 and searches the open agent skills ecosystem to find relevant tools. You
 describe what you want to do — it finds skills that can help.
 
@@ -17,7 +17,7 @@ describe what you want to do — it finds skills that can help.
 ```
 You:  "I want to deploy my React app to AWS with CI/CD"
 
-Skill Scout:
+Task Match Skills:
   🔍 Analyzes: domain=deployment, tools=React/AWS, action=deploy+automate
   📦 Checks: your installed skills
   🌐 Searches: "react deploy aws", "ci cd pipeline", "cloud infrastructure"...
@@ -27,14 +27,14 @@ Skill Scout:
 ## Quick Install
 
 ```bash
-npx skills add CosmosHoshigami/skill-scout
+npx skills add CosmosHoshigami/task-match-skills
 ```
 
 This installs the skill to your current project. To install globally (all projects),
 add the `-g` flag:
 
 ```bash
-npx skills add CosmosHoshigami/skill-scout -g
+npx skills add CosmosHoshigami/task-match-skills -g
 ```
 
 Requires [npx skills CLI](https://skills.sh). Works with Claude Code, Codex,
@@ -43,10 +43,10 @@ Cursor, GitHub Copilot, and any agent supporting the
 
 ## Usage
 
-Skill Scout is designed to activate automatically when you describe a task
+Task Match Skills is designed to activate automatically when you describe a task
 in natural language. However, auto-invocation behavior varies across agents.
 **To guarantee it runs, explicitly invoke the skill before describing your
-task** — for example, type `/skill-scout` followed by your request in Claude
+task** — for example, type `/task-match-skills` followed by your request in Claude
 Code, or use your agent's equivalent skill invocation command. This ensures
 the skill searches for relevant tools before you begin working.
 
@@ -61,7 +61,7 @@ the skill searches for relevant tools before you begin working.
 
 ## Trigger Sensitivity
 
-Skill Scout ships in **aggressive** mode (triggers on most messages). If you
+Task Match Skills ships in **aggressive** mode (triggers on most messages). If you
 prefer less frequent suggestions:
 
 | Mode | When it triggers | How to switch |
@@ -78,7 +78,7 @@ prefer less frequent suggestions:
 ## Structure
 
 ```
-skill-scout/
+task-match-skills/
 ├── SKILL.md                         # Main skill definition
 ├── README.md                        # This file
 ├── LICENSE                          # MIT

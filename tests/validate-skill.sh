@@ -14,7 +14,7 @@ red()   { echo -e "\033[31m✗\033[0m $*"; ((FAIL++)); }
 info()  { echo -e "\033[34m→\033[0m $*"; }
 
 echo "========================================="
-echo "  Skill Scout — Validation"
+echo "  Task Match Skills — Validation"
 echo "========================================="
 echo ""
 
